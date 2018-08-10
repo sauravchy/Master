@@ -31,9 +31,9 @@
 <body>
     <br/>
 	
-    <h1>Hello   <span id='username'></span></h1>
-	<h1>Id   <span id='recordAttribute'></span></h1>
-	<h1>Object Name   <span id='objectAttribute'></span></h1>
+    <h1>UserName :  <span id='username'></span></h1>
+	<h1>RecordId :   <span id='recordAttribute'></span></h1>
+	<h1>ObjectName :  <span id='objectAttribute'></span></h1>
 	
 	<script>
         if (self === top) {
