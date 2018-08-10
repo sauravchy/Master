@@ -32,7 +32,8 @@
     <br/>
 	
     <h1>Hello   <span id='username'></span></h1>
-	<h1>Object   <span id='recordAttribute'></span></h1>
+	<h1>Id   <span id='recordAttribute'></span></h1>
+	<h1>Object Name   <span id='objectAttribute'></span></h1>
 	
 	<script>
         if (self === top) {
@@ -45,6 +46,7 @@
          Sfdc.canvas.oauth.token(sr.oauthToken);
          Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
 		 Sfdc.canvas.byId('recordAttribute').innerHTML = sr.context.environment.record.Id;
+		 Sfdc.canvas.byId('objectAttribute').innerHTML = sr.context.environment.record.attributes.type;
 	    });
     </script>
 
