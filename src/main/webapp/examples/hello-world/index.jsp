@@ -33,7 +33,7 @@
 	 <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button>
     <h1>UserName :  <span id='username'></span></h1>
 	<h1>RecordId :   <span id='recordAttribute'></span></h1>
-	<h1>ObjectName :  <span id='objectAttribute'></span></h1>
+	
 	
 
 
@@ -49,7 +49,7 @@
          Sfdc.canvas.oauth.token(sr.oauthToken);
          Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
 		 Sfdc.canvas.byId('recordAttribute').innerHTML = sr.context.environment.record.Id;
-		 Sfdc.canvas.byId('objectAttribute').innerHTML = sr.context.environment.record.attributes.type;
+		
 	    });
     </script>
 	
