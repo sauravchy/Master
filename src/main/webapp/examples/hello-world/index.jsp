@@ -62,7 +62,7 @@
             name :  'test',
             payload : message
         });
-        console.log(' canvas published : ' + message + ' to ' + canvasTopic );
+        console.log(' canvas published : ' + message + ' to ' + 'test2' );
     }
 </script>
 
