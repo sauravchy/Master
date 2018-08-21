@@ -34,6 +34,9 @@
     <h1>UserName :  <span id='username'></span></h1>
 	<h1>RecordId :   <span id='recordAttribute'></span></h1>
 	<h1>ObjectName :  <span id='objectAttribute'></span></h1>
+	<div class="canvasContainer">
+    <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button> <br/><br/><hr/><br/>
+</div>
 	
 	<script>
         if (self === top) {
@@ -49,6 +52,16 @@
 		 Sfdc.canvas.byId('objectAttribute').innerHTML = sr.context.environment.record.attributes.type;
 	    });
     </script>
+	
+	<script>
+    function canvasPublish(message) {
+        Sfdc.canvas.client.publish( signedRequest.client,{
+            name :  namespacePrefix  + canvasTopic,
+            payload : message
+        });
+        console.log(' canvas published : ' + message + ' to ' + canvasTopic );
+    }
+</script>
 
 </body>
 </html>
