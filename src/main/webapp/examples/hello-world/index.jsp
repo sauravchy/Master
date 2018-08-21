@@ -59,7 +59,7 @@
             // Save the token
          Sfdc.canvas.oauth.token(sr.oauthToken);
         Sfdc.canvas.client.publish( sr.client,{
-            name :  namespacePrefix  + canvasTopic,
+            name :  'test',
             payload : message
         });
         console.log(' canvas published : ' + message + ' to ' + canvasTopic );
