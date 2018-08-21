@@ -55,7 +55,10 @@
 	
 	<script>
     function canvasPublish(message) {
-        Sfdc.canvas.client.publish( signedRequest.client,{
+		var sr = JSON.parse('<%=signedRequestJson%>');
+            // Save the token
+         Sfdc.canvas.oauth.token(sr.oauthToken);
+        Sfdc.canvas.client.publish( sr.client,{
             name :  namespacePrefix  + canvasTopic,
             payload : message
         });
