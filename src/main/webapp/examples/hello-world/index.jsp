@@ -58,6 +58,7 @@
 		var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
          Sfdc.canvas.oauth.token(sr.oauthToken);
+		 console.log('oauthToken :'+sr.oauthToken)
         Sfdc.canvas.client.publish( sr.client,{
             name :  'test',
             payload : message
