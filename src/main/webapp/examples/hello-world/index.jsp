@@ -32,12 +32,7 @@
     <br/>
 	 <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button>
     <h1>UserName :  <span id='username'></span></h1>
-	<h1>RecordId :   <span id='recordAttribute'></span></h1>
-	
-	
 
-
-	
 	<script>
         if (self === top) {
             // Not in Iframe
@@ -48,7 +43,6 @@
             // Save the token
          Sfdc.canvas.oauth.token(sr.oauthToken);
          Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
-		 Sfdc.canvas.byId('recordAttribute').innerHTML = sr.context.environment.record.Id;
 		
 	    });
     </script>
