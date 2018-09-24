@@ -71,7 +71,7 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
 		Sfdc.canvas.client.subscribe(sr.client,{
-        name: 'test',
+        name: 'c.test',
         onData:function (event) {
         console.log("Subscribed to custom event ", event);
 		}});
