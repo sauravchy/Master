@@ -71,9 +71,8 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
 		 Sfdc.canvas.client.subscribe(sr.client,
-		[{name : 'test',   
-		  onData : onData
-                  }]); 
+		 [{name : 'test',   
+		  target : {canvas : 'canvaslyId'}]); 
     }
 </script>
 
