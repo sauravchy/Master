@@ -70,10 +70,10 @@
          //Sfdc.canvas.oauth.token('00D7F000002bpRC!AQgAQLVAG1y7BWwL_Wf_T2PON2Pr_f_DKbjc.I2SDwty44gRDy3U3bHrHR7Wm4tYozQh6n5SIhxjzTRQLSvezZUJCeQo0Hz1');
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
-		Sfdc.canvas.client.subscribe(signedRequest.client, {
+		Sfdc.canvas.client.subscribe(sr.client, [{
         name: 'test',
         onData: onData
-    });
+    }]);
 
     function onData(message) {
         console.log(' canvas received message from visualforce ' + message.recordId );
