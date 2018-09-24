@@ -71,11 +71,11 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
 		 Sfdc.canvas.client.subscribe(sr.client,
-		 [{name : 'test',   
+		 {name : 'test',   
 		  onData : function (e) {                 
                   console.log('I am fine. This Message from VF page with parameter ' + e.recordId);   
                   }  
-                  }]); 
+                  }); 
     }
 </script>
 
