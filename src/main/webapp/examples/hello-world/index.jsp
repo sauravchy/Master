@@ -28,7 +28,7 @@
   
 </head>
   
-<body>
+<body onload="test()">
     <br/>
 	 <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button>
     <h1>UserName :  <span id='username'></span></h1>
@@ -63,6 +63,7 @@
 </script>
 <script>
     function test(message) {
+		debugger;
 		var sr = JSON.parse('<%=signedRequestJson%>');
 		debugger;
             // Save the token
