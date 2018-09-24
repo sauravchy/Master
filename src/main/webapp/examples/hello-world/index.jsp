@@ -62,7 +62,7 @@
     }
 </script>
 <script>
-    function test(message) {
+    function test() {
 		debugger;
 		var sr = JSON.parse('<%=signedRequestJson%>');
 		debugger;
