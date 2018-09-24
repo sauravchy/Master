@@ -68,10 +68,15 @@
             // Save the token
          //Sfdc.canvas.oauth.token('00D7F000002bpRC!AQgAQLVAG1y7BWwL_Wf_T2PON2Pr_f_DKbjc.I2SDwty44gRDy3U3bHrHR7Wm4tYozQh6n5SIhxjzTRQLSvezZUJCeQo0Hz1');
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
-        Sfdc.canvas.client.Subscribe( sr.client,{
-            name :  'test',
-            payload : message
-        });
+		debugger;
+		Sfdc.canvas.client.subscribe(
+		srClient,
+		{
+			name : 'johnny.begood',
+			onData : function (event) {
+				console.log("Subscribed to custom event ", event);
+			}
+		});
         console.log(' canvas published : ' + message + ' to ' + 'test2' );
     }
 </script>
