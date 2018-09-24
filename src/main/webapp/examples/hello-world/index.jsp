@@ -74,7 +74,7 @@
         name: 'test',
         onData:function (event) {
         console.log("Subscribed to custom event ", event);
-    });
+		}});
 
     function onData(message) {
         console.log(' canvas received message from visualforce ' + message.recordId );
