@@ -71,7 +71,7 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
 		Sfdc.canvas.client.subscribe(signedRequest.client, [{
-        name: namespacePrefix  + vfTopic,
+        name: 'test',
         onData: onData
     }]);
 
