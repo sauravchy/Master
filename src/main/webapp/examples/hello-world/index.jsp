@@ -70,8 +70,8 @@
 		debugger;
 		Sfdc.canvas.client.subscribe(sr.client,{
 			name: 'c.test',
-			onData:function (status) {
-			console.log("Subscribed to custom event ", status);
+			onData:function (recordId) {
+			console.log("Subscribed to custom event ", recordId);
 			}});
 	}
 </script>
