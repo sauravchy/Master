@@ -67,12 +67,9 @@
 		var sr = JSON.parse('<%=signedRequestJson%>');
 		debugger;
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
-		debugger;
-		Sfdc.canvas.client.subscribe(sr.client,{
-			name: 'test',
-			onData:function (data) {
-			alert(data.Status);;
-			}});
+		var parameters = sr.context.environment.parameters;
+		console.log('param':+parameters);
+		
 	}
 </script>
 
