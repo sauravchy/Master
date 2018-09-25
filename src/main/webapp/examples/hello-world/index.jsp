@@ -71,7 +71,7 @@
 		Sfdc.canvas.client.subscribe(sr.client,{
 			name: 'c.test',
 			onData:function (data) {
-			alert(data.recordId);;
+			alert(data.Status);;
 			}});
 	}
 </script>
