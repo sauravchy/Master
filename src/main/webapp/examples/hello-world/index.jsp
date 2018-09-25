@@ -69,7 +69,7 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		debugger;
 		Sfdc.canvas.client.subscribe(sr.client,{
-			name: 'c.test',
+			name: 'test',
 			onData:function (data) {
 			alert(data.Status);;
 			}});
