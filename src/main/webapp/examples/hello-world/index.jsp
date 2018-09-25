@@ -68,7 +68,7 @@
 		debugger;
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
 		var parameters = sr.context.environment.parameters;
-		console.log('param'+parameters);
+		console.log('param'+parameters.param);
 		
 	}
 </script>
