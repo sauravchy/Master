@@ -55,7 +55,7 @@
          //Sfdc.canvas.oauth.token('00D7F000002bpRC!AQgAQLVAG1y7BWwL_Wf_T2PON2Pr_f_DKbjc.I2SDwty44gRDy3U3bHrHR7Wm4tYozQh6n5SIhxjzTRQLSvezZUJCeQo0Hz1');
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
         Sfdc.canvas.client.publish( sr.client,{
-            name :  'test',
+            name :  { "message" : message },
             payload : message
         });
         console.log(' canvas published : ' + message + ' to ' + 'test2' );
