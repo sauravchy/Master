@@ -56,7 +56,7 @@
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
         Sfdc.canvas.client.publish( sr.client,{
             name :  'test',
-            payload :  { "message" : message }
+            payload :  { message : message }
         });
         console.log(' canvas published : ' + message + ' to ' + 'test2' );
     }
