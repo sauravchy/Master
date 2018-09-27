@@ -57,7 +57,7 @@
 		Sfdc.canvas.client.publish(
 			sr.client,
 			{	name : "test", 
-				payload : {status : 'Completed'}});
+			});
 
         console.log(' canvas published : ' + message + ' to ' + 'test2' );
     }
