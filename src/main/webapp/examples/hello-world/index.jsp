@@ -3,6 +3,7 @@
 <%
     // Pull the signed request out of the request body and verify/decode it.
    Map<String, String[]> parameters = request.getParameterMap();
+   System.out.println("output"+parameters);
    String[] signedRequest = parameters.get("signed_request");
    if (signedRequest == null) {%>This App must be invoked via a signed request!<%
         return;
