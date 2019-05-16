@@ -19,7 +19,7 @@
   
 <body onload="test()">
     <br/>
-	 
+	 <img src="https://codemachine-dev-ed.my.salesforce.com/sfc/p/7F000002bpRC/a/7F000000gbow/h82aBHeZdSpVLMFfmNiSSOH4KKWJw_1BGwAZURP5a6g"/>
     <h1>UserName :  <span id='username'></span></h1>
 
 	
