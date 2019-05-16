@@ -19,8 +19,8 @@
   
 <body onload="test()">
     <br/>
-	 <img src="https://codemachine-dev-ed.my.salesforce.com/sfc/p/#7F000002bpRC/a/7F000000gbow/h82aBHeZdSpVLMFfmNiSSOH4KKWJw_1BGwAZURP5a6g">
-    <h1>UserName :  <span id='username'></span></h1>
+	 <img src="https://codemachine-dev-ed--c.ap5.content.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0687F00000VVAT2&amp;operationContext=DELIVERY&amp;contentId=05T7F00001ciKMF&amp;page=0&amp;d=/a/7F000000gbow/h82aBHeZdSpVLMFfmNiSSOH4KKWJw_1BGwAZURP5a6g&amp;oid=00D7F000002bpRC&amp;dpt=null&amp;viewId=" alt="AgraMeetup" class="pageImg">
+	 <h1>UserName :  <span id='username'></span></h1>
 
 	
 	
