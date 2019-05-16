@@ -39,7 +39,8 @@
 	
 <script>
     function test() {
-		var value = "<%=signedRequestJson%>";
+		debugger;
+		var value = <%=signedRequestJson%>;
 		debugger;
 		if(value !==null){
 		var sr = JSON.parse('<%=signedRequestJson%>');
