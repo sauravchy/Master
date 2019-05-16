@@ -2,13 +2,10 @@
 <%@ page import="java.util.Map" %>
 <%
     // Pull the signed request out of the request body and verify/decode it.
-   Map<String, String[]> parameters = request.getParameterMap();
-   System.out.println("output"+parameters);
-   String[] signedRequest = parameters.get("signed_request");
-   if (signedRequest == null) {%>This App must be invoked via a signed request!<%
-        return;
-    }
-	String yourConsumerSecret="8400572405209334971";
+   //Map<String, String[]> parameters = request.getParameterMap();
+  // System.out.println("output"+parameters);
+   //String[] signedRequest = parameters.get("signed_request");
+	//String yourConsumerSecret="8400572405209334971";
    <!-- String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);-->
 %>
 
