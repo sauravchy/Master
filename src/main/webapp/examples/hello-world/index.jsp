@@ -5,9 +5,11 @@
    Map<String, String[]> parameters = request.getParameterMap();
    System.out.println("output"+parameters);
    String[] signedRequest = parameters.get("signed_request");
-
+   if (signedRequest == null) {%>This App must be invoked via a signed request!<%
+        return;
+    }
 	String yourConsumerSecret="8400572405209334971";
-    String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
+   <!-- String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);-->
 %>
 
 
@@ -32,45 +34,12 @@
 	 <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button>
     <h1>UserName :  <span id='username'></span></h1>
 
-	<script>
-        if (self === top) {
-            // Not in Iframe
-            alert("This canvas app must be included within an iframe");
-        }
-        Sfdc.canvas(function() {
-		 var sr = JSON.parse('<%=signedRequestJson%>');
-            // Save the token
-         Sfdc.canvas.oauth.token(sr.oauthToken);
-         Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
-		 
-		 
-		
-	    });
-    </script>
 	
-	<script>
-    function canvasPublish(message) {
-		var sr = JSON.parse('<%=signedRequestJson%>');
-		debugger;
-            // Save the token
-         //Sfdc.canvas.oauth.token('00D7F000002bpRC!AQgAQLVAG1y7BWwL_Wf_T2PON2Pr_f_DKbjc.I2SDwty44gRDy3U3bHrHR7Wm4tYozQh6n5SIhxjzTRQLSvezZUJCeQo0Hz1');
-		Sfdc.canvas.oauth.token(sr.client.oauthToken);
-		Sfdc.canvas.client.publish(
-			sr.client,
-			{	name : "test", 
-			});
-
-        console.log(' canvas published : ' + message + ' to ' + 'test2' );
-    }
-</script>
+	
+	
 <script>
     function test() {
-		debugger;
-		var sr = JSON.parse('<%=signedRequestJson%>');
-		debugger;
-		Sfdc.canvas.oauth.token(sr.client.oauthToken);
-		var parameters = sr.context.environment.parameters;
-		console.log('Canvas parameter :'+parameters.param);
+		//debugger;
 		
 	}
 </script>
