@@ -39,8 +39,9 @@
 	
 <script>
     function test() {
+		console.log('test'+'<%=signedRequestJson%>');
 		debugger;
-		if(signedRequestJson !==null){
+		if('<%=signedRequestJson%>' !==null){
 		var sr = JSON.parse('<%=signedRequestJson%>');
 		debugger;
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
