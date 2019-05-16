@@ -38,7 +38,7 @@
 	
 <script>
     function test() {
-		var value='<%=signedRequest%>';
+		var value=<%=signedRequest%>;
 		
 		debugger;
 		if(value !=null){
