@@ -39,17 +39,17 @@
 	
 <script>
     function test() {
-		debugger;
-		var value = <%=signedRequestJson%>;
-		debugger;
-		if(value !==null){
-		var sr = JSON.parse('<%=signedRequestJson%>');
-		debugger;
-		Sfdc.canvas.oauth.token(sr.client.oauthToken);
-		var parameters = sr.context.environment.parameters;
-		console.log('Canvas parameter :'+parameters.name);
-		}
+		var value='<%=signedRequest%>';
 		
+		debugger;
+		if(value !=null){
+			var sr = JSON.parse('<%=signedRequestJson%>');
+			debugger;
+			Sfdc.canvas.oauth.token(sr.client.oauthToken);
+			var parameters = sr.context.environment.parameters;
+			console.log('Canvas parameter :'+parameters.name);
+		
+		}
 		
 	}
 </script>
