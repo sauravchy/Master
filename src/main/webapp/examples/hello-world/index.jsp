@@ -31,7 +31,7 @@
   
 <body onload="test()">
     <br/>
-	 <input id="canvasPublishMessage" value=""/> <button onclick="canvasPublish( document.getElementById('canvasPublishMessage').value )" > Publish </button>
+	 
     <h1>UserName :  <span id='username'></span></h1>
 
 	
