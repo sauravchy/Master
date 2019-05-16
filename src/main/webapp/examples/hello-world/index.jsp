@@ -1,5 +1,16 @@
-
-
+<%@ page import="canvas.SignedRequest" %>
+<%@ page import="java.util.Map" %>
+<%
+    // Pull the signed request out of the request body and verify/decode it.
+   Map<String, String[]> parameters = request.getParameterMap();
+   System.out.println("output"+parameters);
+   String[] signedRequest = parameters.get("signed_request");
+   if (signedRequest == null) {%>This App must be invoked via a signed request!<%
+        return;
+    }
+	String yourConsumerSecret="8400572405209334971";
+    String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -27,10 +38,14 @@
 	
 <script>
     function test() {
-		//debugger;
+		debugger;
+		var sr = JSON.parse('<%=signedRequestJson%>');
+		debugger;
+		Sfdc.canvas.oauth.token(sr.client.oauthToken);
+		var parameters = sr.context.environment.parameters;
+		console.log('Canvas parameter :'+parameters.param);
 		
 	}
 </script>
-
 </body>
 </html>
