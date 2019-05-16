@@ -40,7 +40,7 @@
 <script>
     function test() {
 		debugger;
-		if(<%=signedRequestJson%> !==null){
+		if(signedRequestJson !==null){
 		var sr = JSON.parse('<%=signedRequestJson%>');
 		debugger;
 		Sfdc.canvas.oauth.token(sr.client.oauthToken);
