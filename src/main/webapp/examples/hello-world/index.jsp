@@ -16,7 +16,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 
-    <title>Hello World Canvas Example</title>
+    <title>Agra SFDC Meetup Canvas Demo</title>
 
     <link rel="stylesheet" type="text/css" href="/sdk/css/canvas.css" />
 
