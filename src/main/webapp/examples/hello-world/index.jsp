@@ -32,9 +32,6 @@
     <br/>
 	 <img src="https://codemachine-dev-ed--c.ap5.content.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0687F00000VVAT2&amp;operationContext=DELIVERY&amp;contentId=05T7F00001ciKMF&amp;page=0&amp;d=/a/7F000000gbow/h82aBHeZdSpVLMFfmNiSSOH4KKWJw_1BGwAZURP5a6g&amp;oid=00D7F000002bpRC&amp;dpt=null&amp;viewId=" alt="AgraMeetup" class="pageImg">
 	 <h1>Welcome Trailblazers to AgraMeetup </span></h1>
-	 <h2>CampaignName :  <span id='name'></span></h2>
-	  <h2>Active :  <span id='active'></span></h2>
-	  <h2>Id :  <span id='campaignId'></span></h2
 
 	
 	
@@ -48,10 +45,6 @@
 			Sfdc.canvas.oauth.token(sr.client.oauthToken);
 			var parameters = sr.context.environment.parameters;
 			console.log('Canvas parameter :'+parameters.Name);
-			Sfdc.canvas.byId('name').innerHTML = parameters.Name;
-			Sfdc.canvas.byId('active').innerHTML = parameters.IsActive;
-			Sfdc.canvas.byId('campaignId').innerHTML = parameters.campaignId;
-			
 		
 		
 	}
