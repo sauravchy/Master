@@ -46,7 +46,6 @@
 			var parameters = sr.context.environment.parameters;
 			console.log('Canvas parameter :'+parameters.Name);
 		
-		
 	}
 </script>
 </body>
